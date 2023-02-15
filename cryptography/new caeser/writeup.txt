@@ -1,0 +1,18 @@
+search for the new caeser under the section cryptography in picoctf
+download the python file named caeser.py from the challenge 
+decode the python file (have pasted the decoded file and named it code.py )
+
+((Code explanation:-
+The code imports the "string" module and defines two variables: "LOWERCASE_OFFSET" is set to the Unicode code point of the lowercase letter "a", and "ALPHABET" is set to the first 16 lowercase letters of the English alphabet.
+
+The program also defines two functions: "shift" takes in two arguments, a character "c" and a key "k", and returns a new character that is the result of shifting "c" by the number of positions specified by "k". The "b16_decode" function decodes a string encoded in Base16 format.
+
+The encrypted text is stored in the variable "enc". The program then attempts to decrypt this text by brute force, trying each letter in the "ALPHABET" as the key for the "shift" function, and using the "b16_decode" function to decode the resulting plaintext.
+
+The program outputs 16 different possible plaintexts, one for each letter of the "ALPHABET" used as the key for decryption.))
+
+
+paste the text in the enc in the code then run for the comipler
+you will get different text among them one will be with flag 
+try copying it and then paste it like mine is picoCTF{et_tu?_431db62c5618cd75f1d0b83832b67b46}
+you will get rewarded with 60 points
