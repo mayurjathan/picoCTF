@@ -1,0 +1,5 @@
+wget http://www.caesum.com/handbook/Stegsolve.jar -O stegsolve.jar
+chmod +x stegsolve.jar
+sudo apt install default-jre
+./stegsolve.jar
+java -jar stegsolve.jar

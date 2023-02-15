@@ -1,0 +1,11 @@
+search for the pixelated under the section cryptography in picoctf
+download the images named scrambled1.png and scrambled2.png 
+run this in the ubuntu terminal - wget http://www.caesum.com/handbook/Stegsolve.jar -O stegsolve.jar
+list it(ls) and check for all files to exist 
+chmod +x stegsolve.jar
+install default-jre through the terminal 
+then type java -jar stegsolve.jar it will open an software to work on the png for flag 
+the terminal code are given in pixie.txt 
+then click on file and open scrambled1.png 
+click on analyse and then click on image combiner and open scrambled2.png 
+then check for the picoCTF flag and paste the flag to earn 100 points
