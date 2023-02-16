@@ -1,0 +1,16 @@
+search for the minirsa under the section cryptography in picoctf
+then download ciphertext and paste the numbers in the code mini.py 
+
+code explanation:-
+The code uses the "Crypto.Util.number" library to perform a calculation that finds the integer value of a given expression with a large integer value. 
+It defines three variables, "n", "e", and "c", representing parts of the equation.
+It then defines a function, "find_invpow", that takes two arguments, an integer value "x" and a positive integer value "n".
+The function calculates the inverse power of "x" to the nth degree.
+Next, the program enters a loop that attempts to find a flag by iterating through a range of values for "i". 
+It calculates the inverse power of "i * n + c" to the "e"th degree using the "find_invpow" function, converts it to bytes using the "long_to_bytes" function and 
+checks if the resulting bytes contain the substring "pico".
+If it does, the flag is printed along with the value of "i". 
+If the flag is not found, the program continues to the next iteration of the loop by incrementing "i" by 1.
+
+Then run the code in vscode or from the ubuntu terminal 
+it will print the flag and earn you 300 points.
