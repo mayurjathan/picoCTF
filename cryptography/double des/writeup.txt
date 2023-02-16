@@ -1,0 +1,32 @@
+search for the double des under the section cryptography in picoctf
+then decode the ddes.py( decoded code in code.py )
+
+code explanation : 
+
+The code begins with a shebang (#!/usr/bin/python3 -u) 
+which specifies the location of the Python interpreter to use 
+and an argument -u which specifies that the standard output and error streams should be unbuffered.
+The code imports the DES cipher from the Crypto.Cipher module, 
+as well as some other modules (binascii, itertools, pwn, string, and random) that are used later in the code.
+Next, there are several functions defined that implement various encryption and decryption operations using the DES cipher.
+pad(msg) pads a message with spaces so that its length is a multiple of 8 (the DES block size),
+and returns the padded message encoded as UTF-8 bytes.
+single_encrypt(m, KEY1) encrypts a hardcoded message b'\x11\x11\x11 ' (which has 8 spaces at the end) 
+with a given key KEY1 using the DES cipher in Electronic Codebook (ECB) mode, and returns the encrypted message as a hexadecimal string.
+single_decrypt(msg, KEY1) decrypts a message msg encrypted with a key KEY1 using the DES cipher in ECB mode, 
+and returns the decrypted message as bytes.
+double_encrypt(m, KEY1, KEY2) encrypts a given message m with two keys KEY1 and KEY2 
+by first padding the message with spaces to ensure its length is a multiple of 8,
+encrypting the padded message with KEY1, and then encrypting the result with KEY2.
+The encrypted message is returned as a hexadecimal string.
+double_decrypt(msg, KEY1, KEY2) decrypts a message msg that was encrypted with two keys KEY1 and KEY2 using the double_encrypt function,
+by first decrypting the message with KEY2, and then decrypting the result with KEY1. 
+The decrypted message is returned as bytes.
+The generate_key() function is not used in this code and appears to have been left over from some previous version.
+Next, the code connects to a remote server and reads in a flag and a message to encrypt. 
+It then brute-forces the encryption keys by generating all possible combinations of six-digit numerical strings and using them as keys to encrypt the message. 
+It stores the resulting encrypted messages in a dictionary with the message as the key and the corresponding key as the value.
+It then generates all possible combinations of six-digit numerical strings again and attempts to decrypt the given encrypted message using each pair of keys (one from the first set and one from the second set) in the dictionary.
+If a pair of keys is found that successfully decrypts the flag, the decrypted flag is printed and the loop is broken.
+
+Run the code and get the flag
