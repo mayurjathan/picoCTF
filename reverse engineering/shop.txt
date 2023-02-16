@@ -1,0 +1,6 @@
+search for the shop under the section reverse engineering in picoctf
+copy the link nc mercury.picoctf.net 11371 and paste it on terminal
+you will be having 40 coins , there is a bug through which u get extra coins to buy fruitful flag 
+choose any of the first two options to buy then use minus symbol to buy them 
+this will increase ur balance of coin and will be able to afford fruitful flag 
+then turn the decimal to ascii code for the picoctf flag and earn the 50 points 
