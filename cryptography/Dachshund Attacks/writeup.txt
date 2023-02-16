@@ -1,0 +1,7 @@
+search for the dachshund attacks under the section cryptography in picoctf
+paste the link from the challenge to get numeric values in the terminal(nc mercury.picoctf.net 62786 )
+then use dack.py wiener attack python code to extract d with the use of value e and n 
+install owiener from terminal using pip3 install owiener
+then extract the d value
+then use attack.py code to extract hexadecimal and use hexadecimal analysis tool to get ur picoCTF flag 
+paste it and earn 80 points
