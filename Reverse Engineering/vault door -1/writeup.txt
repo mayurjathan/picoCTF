@@ -1,0 +1,3 @@
+search for the vault door-1 under the section reverse engineering in picoctf
+then download the java code(code.java) from the challenge and decode it to get password(solution.java)
+run the code and get ur flag and earn 100 points
