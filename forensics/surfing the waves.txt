@@ -1,0 +1,36 @@
+search for surfing the waves under the section forensics in picoctf
+
+open the terminal run the commands as follows :
+wget https://mercury.picoctf.net/static/5a487444509cda729298be7bce4bd96c/main.wav
+python3 // opening python sentence by sentence compiler 
+from scipy.io import wavfile
+data=wavfile.read("main.wav")
+print(data)
+import numpy as np
+print(np.unique(data[1]))
+x=[y/100 for y in data[1]]
+print(x)
+x=[y//100//5-2 for y in data[1]]
+print(x)
+import string
+string.hexdigits
+'0123456789abcdefABCDEF'
+y=[string.hexdigits[j] for j in x]
+print(y)
+z=''.join(y)
+print(z)
+bytearray.fromhex(z).decode()
+
+This code does the following:
+
+The first line uses the wget command to download a file called "main.wav" from a URL.
+The second line starts a Python interpreter.
+The third line imports the wavfile module from the scipy.io library and uses it to read the contents of the "main.wav" file. The contents are stored in the data variable.
+The fourth line prints the contents of the data variable.
+The fifth line imports the numpy library as np and prints the unique values in the second element of the data variable.
+The sixth line creates a new list x by dividing each element in the second element of the data variable by 100.
+The seventh line creates another new list x by dividing each element in the second element of the data variable by 100, then integer dividing by 5, and then subtracting 2.
+The eighth line imports the string library and prints the hex digits defined in it.
+The ninth line creates a new list y by mapping each element in x to its corresponding hex digit in the string.hexdigits string.
+The tenth line joins the elements in the y list to create a new string z.
+The eleventh line creates a bytearray from the hex string z and then decodes it to obtain the original data.
