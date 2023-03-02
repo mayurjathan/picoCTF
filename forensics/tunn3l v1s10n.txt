@@ -1,0 +1,11 @@
+The challenge provides a hint to use a tool called "Bless Hex Editor" to examine the file and discover the flag.
+Using Bless Hex Editor, we can see that the file contains some corrupted bytes.
+ By researching the BMP file format and examining the file in the editor, 
+ we can identify the specific bytes that need to be corrected to recover the flag.
+First, we need to change the offset info header to 36 and 0B to 00. 
+Then, we need to change the offset info header to 38 and 0B to 00. 
+These changes will enable us to open the file, but the flag is still not visible.
+Next, we need to change the height of the bitmap from 01 to 03. 
+This makes the flag somewhat visible, but it is still difficult to read.
+Finally, we need to increase the size of the image by changing "32" to "42". 
+This makes the flag clearly visible
