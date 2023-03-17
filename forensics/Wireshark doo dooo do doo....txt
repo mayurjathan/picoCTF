@@ -1,0 +1,3 @@
+download wireshark and download the file provide in the challenge
+check for the http file then right click and follow the http stream
+then get the cipher code of flag and decode it with rot13 decoder and get the flag
