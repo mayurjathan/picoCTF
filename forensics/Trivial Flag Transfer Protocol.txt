@@ -1,0 +1,8 @@
+open the Trivial Flag Transfer Protocol under forensics and download the file named flag
+download wireshark to open the file 
+click on file then click on export objects then click on TFTP
+save all the files in an folder through terminal open the folder
+then decode all the rot13 text to get clues
+sudo apt install steghide (download steghide if its not installed)
+then run the command steghide extract -sf picture1.bmp -p DUEDILIGENCE to extract the picture
+the flag txt was stored in picture3.bmp then cat the flag.txt to get the flag
